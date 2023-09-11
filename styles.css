@@ -253,3 +253,7 @@ h1#logo-txt {
   cursor: pointer;
   transition: .5s;
 }
+
+.chip:hover{
+  background-color:#4d4d4d ;
+}
