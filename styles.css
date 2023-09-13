@@ -164,7 +164,8 @@ h1#logo-txt {
 
 
 .sidebar {
-  background-color: #212121;
+  /* background-color: #212121; */
+  background-color: #252525;
   padding-top: 10px;
   width: 240px;
   overflow-y: scroll;
@@ -256,4 +257,167 @@ h1#logo-txt {
 
 .chip:hover{
   background-color:#4d4d4d ;
+}
+
+/* Video container starts here */
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 18px;
+  padding: 20px 25px;
+  background-color: #181818;
+  overflow-y: scroll;
+  height: calc(100vh - 117px);
+}
+
+.video-content-cover {
+  position: relative;
+  transition: .5s;
+  transition-delay: .05s;
+}
+
+.video-content-cover:hover {
+  transform: translateY(60px);
+  z-index: 5;
+}
+
+.video-content-cover:nth-child(4n+1):hover {
+  transform: translate(50px, 60px);
+  z-index: 5;
+}
+
+.video-content-cover:nth-child(4n+4):hover {
+  transform: translate(-30px, 60px);
+  z-index: 5;
+}
+
+.video-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
+  transition: .5s;
+  width: 100%;
+}
+
+.video-content:hover {
+  transform: scale(1.5);
+  z-index: 5;
+  background-color: #202020;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.video-content:hover .video-details {
+  padding: 10px;
+}
+
+.video-box {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 145px;
+}
+
+.video-box > img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-details {
+  display: flex;
+  color: #fff;
+  padding-top: 12px;
+  transition: .5s;
+}
+
+.detail {
+  margin: 12px;
+}
+
+.title {
+  font-size: .9rem;
+  transition: .5sc;
+}
+
+.video-content:hover .title{
+  font-size: .7rem;
+}
+
+.channel-name {
+  font-size: .8rem;
+  margin-top: 10px;
+  color: #aaa;
+}
+
+.views-upload {
+  font-size: .8rem;
+  display: flex;
+  color: #aaa;
+}
+
+.video-content:hover .views-upload{
+  font-size: .6rem;
+}
+.upload {
+  margin-left: 5px;
+}
+
+
+
+.channel-logo {
+  position: relative;
+  margin-top: 12px;
+  min-width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.video-content:hover .channel-logo{
+  min-width: 25px;
+  height: 25px;
+}
+.channel-logo > img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden-content {
+  display: none;
+  padding: 5px 10px;
+}
+
+.video-content:hover .hidden-content {
+  display: block;
+}
+
+.btn {
+  padding: 5px 0px;
+  color: #aaa;
+  text-transform: uppercase;
+  display: flex;
+  font-size: .6rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #373737;
+  margin: 5px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn i {
+  font-size: .7rem;
+  color: #aaa;
+  margin-right: 5px;
 }
